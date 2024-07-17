@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscaminas"
+        android:gravity="center"
+        android:textSize="36dp"
+        android:textColor="#FFF"
+        android:background="#014"/>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="8"
+            android:rowCount="8"
+            android:padding="16dp"
+            >
+        </GridLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Boton de pausa    -->
+    <Button
+        android:id="@+id/button_show_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:backgroundTint="#0a1430"
+        android:textColor="@color/white"
+        android:text="Menu" />
+
+    <!-- Menu de pausa    -->
+    <RelativeLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:padding="50dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#B30A1430"
+            android:backgroundTintMode="screen"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <Button
+                android:id="@+id/button_continue"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#014"
+                android:text="Continue"
+                android:textColor="@color/white"
+                app:icon="@drawable/logo" />
+
+
+            <Button
+                android:id="@+id/button_restart"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="100dp"
+                android:backgroundTint="#014"
+                android:text="Restart"
+                android:textColor="@color/white"
+                app:icon="@drawable/logo" />
+
+            <Button
+                android:id="@+id/button_home"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="170dp"
+                android:backgroundTint="#014"
+                android:text="Home"
+                android:textColor="@color/white"
+                app:icon="@drawable/logo" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

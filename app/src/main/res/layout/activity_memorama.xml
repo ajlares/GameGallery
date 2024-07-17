@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@drawable/background">
+
+   <!-- Layout para el mensaje de victoria y los botones -->
+    <LinearLayout
+        android:id="@+id/winLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/winMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¡Ganaste!"
+            android:textSize="24sp"
+            android:textColor="#FF0000" />
+
+        <Button
+            android:id="@+id/exitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salir" />
+
+        <Button
+            android:id="@+id/restartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver a jugar" />
+    </LinearLayout>
+
+    <!-- Primera fila de botones -->
+    <GridLayout
+        android:id="@+id/gridLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout3"
+        android:layout_marginBottom="10dp"
+        android:columnCount="5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:rowCount="2">
+
+        <Button
+            android:id="@+id/buttonA1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#0a1430"
+            android:tag="D"
+            android:text=""
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/buttonB1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#0a1430"
+            android:tag="A"
+            android:text=""
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/buttonC1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#0a1430"
+            android:tag="E"
+            android:text=""
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/buttonD1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#0a1430"
+            android:tag="B"
+            android:text=""
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/buttonE1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:backgroundTint="#0a1430"
+            android:tag="C"
+            android:text=""
+            android:textColor="@color/white" />
+
+
+    </GridLayout>
+
+    <!-- Segunda fila de botones -->
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="341dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonB2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#0a1430"
+            android:tag="B"
+            android:text=""
+            android:textColor="@color/white"
+
+            />
+
+        <Button
+            android:id="@+id/buttonD2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#0a1430"
+            android:tag="D"
+            android:text=""
+            android:textColor="@color/white"
+
+            />
+
+        <Button
+            android:id="@+id/buttonA2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#0a1430"
+            android:tag="A"
+            android:text=""
+            android:textColor="@color/white"
+
+            />
+
+        <Button
+            android:id="@+id/buttonC2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#0a1430"
+            android:tag="C"
+            android:text=""
+            android:textColor="@color/white"
+
+            />
+
+        <Button
+            android:id="@+id/buttonE2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#0a1430"
+            android:tag="E"
+            android:text=""
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!-- Boton de pausa    -->
+    <Button
+        android:id="@+id/button_show_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:backgroundTint="#0a1430"
+        android:textColor="@color/white"
+        android:text="Menu" />
+
+    <!-- Menu de pausa    -->
+    <RelativeLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:padding="50dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#B30A1430"
+            android:backgroundTintMode="screen"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <Button
+                android:id="@+id/button_continue"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#014"
+                android:text="Continue"
+                android:textColor="@color/white"
+                app:icon="@drawable/logo" />
+
+
+            <Button
+                android:id="@+id/button_restart"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="100dp"
+                android:backgroundTint="#014"
+                android:text="Restart"
+                android:textColor="@color/white"
+                app:icon="@drawable/logo" />
+
+            <Button
+                android:id="@+id/button_home"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="170dp"
+                android:backgroundTint="#014"
+                android:text="Home"
+                android:textColor="@color/white"
+                app:icon="@drawable/logo" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
